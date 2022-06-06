@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/tls"
 	"fmt"
+	. "sslcheck/config"
 	"time"
 )
 
@@ -35,6 +36,8 @@ func expireDateVerify(conn *tls.Conn) bool {
 }
 
 func main() {
+	InitAll()
+	fmt.Println(Conf.GetString("expireDay"))
 	conn, err := tls.Dial("tcp", "www.baidu.com:443", nil)
 	if err != nil {
 		panic("Server doesn't support SSL certificate err: " + err.Error())
