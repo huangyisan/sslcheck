@@ -1,4 +1,7 @@
+---
 expireDay: 10
-domain:
-  - www.baidu.com
+domains:
   - www.sina.com
+  - www.baidu.com
+  - www.163.com
+  - www.xxxadfawefdf.com
